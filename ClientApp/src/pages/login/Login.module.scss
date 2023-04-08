@@ -1,0 +1,35 @@
+.containerLogin {
+  margin-top:100px;
+  padding:60px 40px;
+  box-shadow: 19px 10px 46px -20px rgba(34, 60, 80, 0.42);
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  gap: 20px;
+  background-color: rgba(218, 213, 213, 0.38);
+  width: 350px;
+
+  input {
+    width: 100%;
+    &.invalid{
+      animation: shake 0.3s ease-in-out 0s 2;
+      border-color: #ff0000;
+    }
+  }
+
+  @keyframes shake {
+    0% {
+      margin-left: 0rem;
+    }
+    25% {
+      margin-left: 0.5rem;
+    }
+    75% {
+      margin-left: -0.5rem;
+    }
+    100% {
+      margin-left: 0rem;
+    }
+  }
+
+}

@@ -1,0 +1,70 @@
+.emailPreviewBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  border: 1px solid black;
+  border-radius: 7px;
+  padding: 10px 20px;
+  width: 100%;
+  box-shadow: 5px 5px 10px -5px rgba(34, 60, 80, 0.6);
+
+  &:hover {
+    background-color: #e5e5e5;
+    transition: background-color 0.5s ease;
+    cursor: pointer;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    .from {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .title {
+      font-size: 14px;
+      font-weight: 400;
+      text-align: start;
+    }
+  }
+
+  .attachments {
+    text-align: end;
+    white-space: nowrap;
+  }
+}
+
+.emailBox {
+  width: 100%;
+  max-width: 80vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .from {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: start;
+  }
+
+  .body {
+    border-top: 1px solid black;
+    margin: 20px;
+    padding: 10px;
+    font-size: 16px;
+    align-self: start;
+  }
+
+  .attachmentsFile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}

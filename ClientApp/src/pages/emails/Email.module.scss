@@ -1,0 +1,16 @@
+.emailContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: 40px;
+  min-width: 500px;
+
+}
+
+.scrollPanel{
+  margin-top: 10px;
+  padding: 20px;
+}

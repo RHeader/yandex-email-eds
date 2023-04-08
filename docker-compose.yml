@@ -1,0 +1,24 @@
+﻿version: '3.9'
+
+services:
+  nginx-proxy:
+    image: proxy
+    build: ./ClientApp/
+    container_name: nginx_identity
+    ports:
+      - '80:80'
+    volumes:
+      - './proxy.conf:/etc/nginx/conf.d/default.conf'
+      - './request_logs/:/var/log/nginx/'
+    restart: always
+  
+  emailapp:
+    image: email_app
+    build: ./src/
+    container_name: emailapp
+    environment:
+      - ConnectionStrings__Server=Host=database;Port=5432;Username=postgres;Password=qwerty;Database=auth_data;Pooling=true;
+      - ConnectionStrings__Logs=mongodb://logadmin:log1sO1ds3a@logger:27017
+      - AdminUri=https://superset.auth.dev.asbc.lo
+      - ASPNETCORE_ENVIRONMENT=Production
+    restart: always

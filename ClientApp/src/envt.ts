@@ -1,0 +1,1 @@
+export const host = import.meta.env.PROD ? '/api' : 'https://localhost:7293'

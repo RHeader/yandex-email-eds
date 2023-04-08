@@ -1,0 +1,49 @@
+.containerEmailFormSender {
+  min-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 15px;
+
+  .inputStyle {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 100%;
+
+    ul {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+    }
+
+  }
+
+  .signBodyArea{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+  }
+
+
+  .editorArea {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+  }
+
+  .certUploader{
+     margin: 7px;
+  }
+
+  .uploader {
+    width: 100%;
+  }
+
+  .sendButton {
+    align-self: end;
+  }
+}
